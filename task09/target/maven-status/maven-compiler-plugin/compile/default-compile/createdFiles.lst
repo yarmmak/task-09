@@ -1,0 +1,8 @@
+com\task09\dto\ForecastData.class
+com\task09\dto\ResponseData.class
+com\task09\dto\ResponseData$ResponseDataBuilder.class
+com\task09\model\WeatherRecord.class
+com\task09\dto\HourlyUnitsData.class
+com\task09\Processor.class
+com\task09\api\OpenMeteoApiClient.class
+com\task09\dto\HourlyData.class
