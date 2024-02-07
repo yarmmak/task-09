@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@DynamoDBTable(tableName = "Weather")
+@DynamoDBTable(tableName = "cmtr-52e956b4-Weather-test")
 @AllArgsConstructor
 @Getter @Setter
 @ToString
