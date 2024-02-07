@@ -22,7 +22,7 @@ import java.util.UUID;
 		tracingMode = TracingMode.Active
 )
 @LambdaUrlConfig
-public class Processor implements RequestHandler<Object, ResponseData>
+public class Processor implements RequestHandler<Object, Void>
 {
 	private static final String AWS_REGION = "eu-central-1";
 
@@ -36,7 +36,7 @@ public class Processor implements RequestHandler<Object, ResponseData>
 		this.initDynamoDbMapper();
 	}
 
-	public ResponseData handleRequest(Object request, Context context)
+	public Void handleRequest(Object request, Context context)
 	{
 		this.initLambdaLogger(context);
 		OpenMeteoApiClient openMeteoApiClient = new OpenMeteoApiClient();;
@@ -48,7 +48,7 @@ public class Processor implements RequestHandler<Object, ResponseData>
 		dbMapper.save(weatherRecord);
 		logger.log(String.format("Weather data added successfully! Data: %s", weatherRecord));
 
-		return buildResponse();
+		return null;
 	}
 
 	private void initDynamoDbClient()
